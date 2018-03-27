@@ -12,3 +12,5 @@
 .gradle
 hs_err_pid*
 *.iml
+build/*
+*.dylib
