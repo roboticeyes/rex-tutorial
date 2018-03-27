@@ -52,6 +52,7 @@ dependencies {
     compile 'com.roboticeyes:rex-core-io:2.3.0-29'
     compile 'com.roboticeyes:rex-core-processing:2.3.0-29'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.9.4'
+    compile 'com.mashape.unirest:unirest-java:1.4.9'
 
     testCompile 'junit:junit:4.12'
 }

@@ -9,7 +9,9 @@
 package com.roboticeyes.rex.tutorial;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mashape.unirest.http.Unirest;
 import com.roboticeyes.rex.tutorial.steps.T00_ConvertGeometry;
+import com.roboticeyes.rex.tutorial.steps.T01_GetAccessToken;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,5 +42,14 @@ public class Main {
         }
 
         T00_ConvertGeometry.start(rexInput.getInputFileName(), rexInput.getOutputFileName());
+        String token = T01_GetAccessToken.start(rexInput.getClientId(), rexInput.getClientSecret());
+        if (!token.isEmpty())
+            System.out.println("Your access token is:\n" + token + "\n");
+
+        try {
+            Unirest.shutdown();
+        } catch (IOException e) {
+            System.err.println("Cannot shutdown REST client: " + e.getMessage());
+        }
     }
 }
