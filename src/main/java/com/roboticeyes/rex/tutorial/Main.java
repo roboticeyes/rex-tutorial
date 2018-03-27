@@ -9,7 +9,7 @@
 package com.roboticeyes.rex.tutorial;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.roboticeyes.rex.tutorial.samples.T00_ConvertGeometry;
+import com.roboticeyes.rex.tutorial.steps.T00_ConvertGeometry;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,7 +22,7 @@ public class Main {
         LogManager.getLogManager().reset();
 
         System.out.println("------------------------------------------");
-        System.out.println("Welcome to REX tutorials");
+        System.out.println("             Welcome to REX               ");
         System.out.println("------------------------------------------");
         System.out.println();
 

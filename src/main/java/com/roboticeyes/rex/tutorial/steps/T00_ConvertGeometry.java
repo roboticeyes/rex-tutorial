@@ -6,7 +6,7 @@
  * IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
  * PARTICULAR PURPOSE.
  */
-package com.roboticeyes.rex.tutorial.samples;
+package com.roboticeyes.rex.tutorial.steps;
 
 import com.roboticeyes.rex.core.io.ErrorCode;
 import com.roboticeyes.rex.core.io.dae.ColladaReader;
