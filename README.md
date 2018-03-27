@@ -9,6 +9,6 @@ This repository contains some sample code snippets which should help REX develop
 * Make sure that you have a REX API token (please see https://support.robotic-eyes.com/docs/apitoken/)
 * It is a good starting point to read through the development tutorial on our support page https://support.robotic-eyes.com/docs/api-introduction/
 
-## Compilation
+## Start tutorial
 
-In order to compile the tutorial(s) you just have to open up your shell and type `./gradlew assemble`
+In order to start the tutorial(s) you just have to open up your shell and type `./gradlew -q run`

@@ -1,0 +1,35 @@
+/**
+ * Author: Robotic Eyes GmbH
+ * Date  : 2018
+ */
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+// This is the access for the public REX assets (do not change!)
+def _mavenUser = "rex-dev"
+def _mavenPassword = "xn7vaelR"
+
+mainClassName = "com.roboticeyes.rex.tutorial.Main"
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://drops-01.robotic-eyes.com/artifactory/libs-release-public'
+        if (_mavenUser && _mavenPassword) {
+            credentials {
+                username _mavenUser
+                password _mavenPassword
+            }
+        }
+    }
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    compile 'com.roboticeyes:rex-core-base:2.3.0-29'
+    compile 'com.roboticeyes:rex-core-io:2.3.0-29'
+    compile 'org.projectlombok:lombok:1.16.16'
+
+    testCompile 'junit:junit:4.12'
+}
