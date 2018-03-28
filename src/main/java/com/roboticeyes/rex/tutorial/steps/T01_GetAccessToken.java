@@ -4,11 +4,12 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import com.roboticeyes.rex.tutorial.Globals;
 import org.json.JSONObject;
 
 public class T01_GetAccessToken {
 
-    private static final String OAUTH_URL = "https://rex.robotic-eyes.com/oauth/token";
+    private static final String OAUTH_URL = Globals.RexBaseUri + "/oauth/token";
 
     public static String start(String clientId, String clientSecret) {
 

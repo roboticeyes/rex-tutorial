@@ -13,6 +13,8 @@ public class RexInput {
 
     private String inputFileName;
     private String outputFileName;
+    private String modelName;
+    private int modelArea;
     private String clientId;
     private String clientSecret;
 
@@ -47,4 +49,22 @@ public class RexInput {
     public void setOutputFileName(String outputFileName) {
         this.outputFileName = outputFileName;
     }
+
+    public String getModelName() {
+        return modelName;
+    }
+
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
+
+    public int getModelArea() {
+        return modelArea;
+    }
+
+    public void setModelArea(int modelArea) {
+        this.modelArea = modelArea;
+    }
+
+
 }

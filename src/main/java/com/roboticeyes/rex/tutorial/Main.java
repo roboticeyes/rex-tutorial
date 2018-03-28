@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mashape.unirest.http.Unirest;
 import com.roboticeyes.rex.tutorial.steps.T00_ConvertGeometry;
 import com.roboticeyes.rex.tutorial.steps.T01_GetAccessToken;
+import com.roboticeyes.rex.tutorial.steps.T02_GetUserId;
+import com.roboticeyes.rex.tutorial.steps.T03_CreateModel;
 
 import java.io.File;
 import java.io.IOException;
@@ -43,8 +45,14 @@ public class Main {
 
         T00_ConvertGeometry.start(rexInput.getInputFileName(), rexInput.getOutputFileName());
         String token = T01_GetAccessToken.start(rexInput.getClientId(), rexInput.getClientSecret());
-        if (!token.isEmpty())
-            System.out.println("Your access token is:\n" + token + "\n");
+        System.out.println("Access token: " + token + "\n");
+
+        String userId = T02_GetUserId.start(token);
+        System.out.println("UserId is: " + userId + "\n");
+
+        String modelUrl = T03_CreateModel.start(token, userId,
+                rexInput.getModelName(), rexInput.getModelArea(), rexInput.getOutputFileName());
+        System.out.println("Uploaded model URL: " + modelUrl);
 
         try {
             Unirest.shutdown();

@@ -1,6 +1,8 @@
 {
     "inputFileName": "./data/untitled.obj",
     "outputFileName": "./data/untitled.rex",
+    "modelName": "TestModel",
+    "modelArea": 4,
     "clientId": "<your client id>",
     "clientSecret": "<your client secret>"
 }
