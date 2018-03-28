@@ -9,15 +9,31 @@ This repository contains some sample code snippets which should help REX develop
 * Make sure that you have a REX API token (please see https://support.robotic-eyes.com/docs/apitoken/)
 * It is a good starting point to read through the development tutorial on our support page https://support.robotic-eyes.com/docs/api-introduction/
 
+### Edit sample.json
+
+Before executing the tutorial, please make sure to edit the `sample.json` file which will be picked as a command line
+argument upon program execution.
+
+The `sample.json` needs to have a valid `clientId` and `clientSecret`. Both can be obtained from the REX portal (Settings -> API token).
+If you want to change the demo model, to something useful, just edit the `inputFileName` accordingly.
+
 ## Start application with gradle
 
 In order to start the tutorial(s) you just have to open up your shell and type `./gradlew -q run`
 
 ## Build fat jar
 
-You can build a fat jar by using shadowJar
+You can build a fat jar by using shadowJar and execute the application using `java`:
 
 ```
 ./gradlew shadowJar
 java -jar build/libs/*-all.jar sample.json
 ```
+
+## Contribution
+
+* If you catch a bug, file an issue
+* If you want to extend the tutorial, file an issue
+* If you want to contribute to this repository feel free, create a new branch, and file a pull request (adding breiting) as reviewer
+
+If you have further questions please feel free to go to our forum https://forum.robotic-eyes.com.
